@@ -5,5 +5,7 @@ venv/
 env
 
 __pychache__
+/__pychache__/
+.__pychache__
 .vscode
 
