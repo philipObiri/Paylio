@@ -3,9 +3,10 @@ venv/
 
 .env
 env
-
-__pychache__
-/__pychache__/
-.__pychache__
+__pycache__
+/__pycache__/
+.__pycache__
 .vscode
 
+
+db.sqlite3
