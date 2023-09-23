@@ -20,6 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +123,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+AUTH_USER_MODEL = 'userauths.User'
+
+JAZZMIN_SETTINGS= {
+    "site_title": "Paylio",
+    "site_header" : "Admin Dashboard",
+    "site_brand": "Leading Payment Solutions",
+    "copyright": "Paylio Ghana - All Rights Reserved  Copyright 2023 ",
+    # "order_with_respect_to": ["core", "userauths", "transactions", "addon", "blog"]
+}
