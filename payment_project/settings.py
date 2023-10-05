@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # Custom Apps 
     'core',
     'userauths',
+    'account',
 ]
 
 MIDDLEWARE = [
@@ -112,8 +113,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
-STATIC_FILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -128,6 +129,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'userauths.User'
 
+LOGIN_URL = "userauths:sign-in"
+# LOGIN_REDIRECT_URL = "userauths:sign-in"
+LOGOUT_REDIRECT_URL = "userauths:sign-out"
+
 JAZZMIN_SETTINGS= {
     "site_title": "Paylio",
     "site_header" : "Admin Dashboard",
@@ -135,3 +140,4 @@ JAZZMIN_SETTINGS= {
     "copyright": "Paylio Ghana - All Rights Reserved  Copyright 2023 ",
     # "order_with_respect_to": ["core", "userauths", "transactions", "addon", "blog"]
 }
+
